@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+(cd /tmp && curl -Lk https://github.com/pruett/dotfiles/tarball/master | tar zx)
+mv /tmp/pruett-dotfiles* ~/.dotfiles
+(cd ~/.dotfiles/ && echo "✨ Successfully downloaded pruett/dotfiles. ✨")
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [ -f Brewfile ]; then
+    read -p "Install the contents of the Brewfile? (Y/n)? " choice
+    case "$choice" in
+        ""  ) brew bundle;;
+        y|Y ) brew bundle;;
+        n|N ) exit 0;;
+        *   ) exit 1;;
+    esac
+fi

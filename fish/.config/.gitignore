@@ -1,0 +1,6 @@
+fish/conf.d/*
+fish/functions/*
+fish/completions/*
+
+!fish/functions/fish_mode_prompt.fish
+!fish/functions/fish_prompt.fish
