@@ -2,7 +2,7 @@
 # and used for user-specific and/or sensitive
 # data like username, tokens, signing keys, etc.
 #
-# To use, rename to .gitconfig.local
+# To use, duplicate and edit a copy of this file named `.gitconfig.local`
 #
 # e.g.
 #

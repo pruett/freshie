@@ -6,35 +6,23 @@
 $ curl https://raw.githubusercontent.com/pruett/dotfiles/master/install | sh
 ```
 
-### Setup fish shell
+## Install Homebrew (and formulae)
 
-Install and setup the fish shell environment:
+Visit https://brew.sh/ and install Homebrew
+
+Next, install homebrew formulae defined in Brewfile
 
 ```bash
-$ brew install fish
-$ echo `which fish` | sudo tee -a /etc/shells
-$ chsh -s `which fish`
+$ brew bundle
 ```
 
-### Link dotfiles
+## Setup dotfile symlinks with `stow`
 
-We'll use [GNU Stow](https://www.gnu.org/software/stow/) to manage our symlinks:
+Use [GNU Stow](https://www.gnu.org/software/stow/) to manage our symlinks:
 
 ```bash
 $ brew install stow
-$ stow git neovim # etc.
-# remove link anytime
-$ stow -D git
-```
-
-### Setup neovim
-
-- Run stow, add [minpac package manager](https://github.com/k-takata/minpac), and update packages found in ~/.config/nvim/init.vim
-
-```bash
-$ stow neovim
-$ git clone git@github.com:k-takata/minpac.git \
-    ~/.config/nvim/pack/minpac/opt/minpac
-$ nvim
-# run :PackClean and :PackUpdate within nvim to install packages
+# Loop over directories and run `stow` to enable respective dotfile symlinking
+$ cd ~/.dotfiles && find . -not -path '*/\.*' -maxdepth 1 -mindepth 1 -type d | sed -e 's/^\.\///'| xargs -I % sh -c 'stow %'
+# Remove stow link anytime with stow -D <directory>
 ```

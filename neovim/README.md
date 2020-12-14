@@ -8,4 +8,3 @@ $ git clone git@github.com:k-takata/minpac.git \
 $ nvim
 # run :PackClean and :PackUpdate within nvim to install packages
 ```
-
