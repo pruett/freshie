@@ -26,3 +26,5 @@ $ brew install stow
 $ cd ~/.dotfiles && find . -not -path '*/\.*' -maxdepth 1 -mindepth 1 -type d | sed -e 's/^\.\///'| xargs -I % sh -c 'stow %'
 # Remove stow link anytime with stow -D <directory>
 ```
+
+Finally, [set up git](git/README.md)
