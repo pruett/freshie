@@ -26,11 +26,14 @@ brew "wget"
 brew "yarn"
 
 # Apps
+
 cask "1password"
 cask "appcleaner"
+cask "brave-browser-dev"
 cask "caffeine"
 cask "docker"
 cask "dropbox"
+cask "firefox-developer-edition"
 cask "flux"
 cask "font-fira-code"
 cask "font-hack-nerd-font"

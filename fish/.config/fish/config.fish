@@ -37,7 +37,7 @@ function brewu -d "Update and clenaup Homebrew formulae"
 end
 
 function dot -d "Open dotfiles in VSCode"
-    code ~/.dotfiles
+    cd ~/.dotfiles && code .
 end
 
 function cleands -d "Clean .DS_Store files from directory"

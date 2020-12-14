@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/core": {
-        "revision": "540f188bebfaeba61cc44bcdfa318db592352d43"
+        "revision": "d914aab917710e94170526641d16414cb6a2083e"
       },
       "homebrew/bundle": {
         "revision": "5628f2152de4896e0994fe0c3c1d0d7350ddf1ff"
@@ -11,10 +11,10 @@
         "revision": "492fa4ecaffcd735fea8aad6655ccf10228e6c0f"
       },
       "homebrew/cask-fonts": {
-        "revision": "8eb10a056ccf853ac5d08a2eca81d776bc81760f"
+        "revision": "ab3e5d7d313b64c0a2c4041196a8eaa8e1539c9c"
       },
       "homebrew/cask": {
-        "revision": "ad51ae1059066d382b0048fa50ea6b8b6dab74a6"
+        "revision": "d62fb7cd67e60addbd7244044a8c04d760f4268a"
       }
     },
     "brew": {
@@ -582,15 +582,33 @@
         "options": {
           "full_name": "font-hack-nerd-font"
         }
+      },
+      "rectangle": {
+        "version": "0.40",
+        "options": {
+          "full_name": "rectangle"
+        }
+      },
+      "brave-browser-dev": {
+        "version": "87.1.19.59,119.59",
+        "options": {
+          "full_name": "brave-browser-dev"
+        }
+      },
+      "firefox-developer-edition": {
+        "version": "latest",
+        "options": {
+          "full_name": "firefox-developer-edition"
+        }
       }
     }
   },
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "2.6.1",
+        "HOMEBREW_VERSION": "2.6.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "540f188bebfaeba61cc44bcdfa318db592352d43",
+        "Homebrew/homebrew-core": "d914aab917710e94170526641d16414cb6a2083e",
         "CLT": "12.2.0.0.1.1604076827",
         "Xcode": "12.0",
         "macOS": "11.0.1"
