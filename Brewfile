@@ -22,6 +22,7 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "tree"
 brew "vim"
+brew "volta"
 brew "wget"
 brew "yarn"
 

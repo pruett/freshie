@@ -14,6 +14,12 @@ if test -d ~/.cargo/bin/
     set -gx PATH $PATH ~/.cargo/bin
 end
 
+# Add Volta if installed
+if test -d ~/.volta/bin/
+    set -gx VOLTA_HOME "$HOME/.volta"
+    set -gx PATH "$VOLTA_HOME/bin" $PATH
+end
+
 # -------------
 # Additional (optional) config
 # -------------
