@@ -14,8 +14,10 @@ if test -d ~/.cargo/bin/
     set -gx PATH $PATH ~/.cargo/bin
 end
 
-# enable nodenv
-status --is-interactive; and source (nodenv init - | psub)
+# Enable nodenv if installed
+if type -q nodenv
+    status --is-interactive; and source (nodenv init - | psub)
+end
 
 # -------------
 # Additional (optional) config
