@@ -2,5 +2,6 @@ fish/conf.d/*
 fish/functions/*
 fish/completions/*
 
+!fish/conf.d/.gitkeep
 !fish/functions/fish_mode_prompt.fish
 !fish/functions/fish_prompt.fish
