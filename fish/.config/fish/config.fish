@@ -11,20 +11,19 @@ set -gx PATH\
 
 # Add rust binaries to PATH if rust is installed
 if test -d ~/.cargo/bin/
-    set -gx PATH $PATH ~/.cargo/bin
+    set -gx PATH $PATH "$HOME/.cargo/bin"
 end
 
-# Add Volta if installed
-if test -d ~/.volta/bin/
-    set -gx VOLTA_HOME "$HOME/.volta"
-    set -gx PATH "$VOLTA_HOME/bin" $PATH
+# Add asdf if installed
+if test -d /usr/local/opt/asdf
+    source /usr/local/opt/asdf/asdf.fish
 end
 
 # -------------
 # Additional (optional) config
 # -------------
-if test -e ~/.localconfig
-    source ~/.localconfig
+if test -e ~/.localconfig.fish
+    source ~/.localconfig.fish
 end
 
 # -------------
