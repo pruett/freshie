@@ -36,6 +36,7 @@ function brewu -d "Update and clenaup Homebrew formulae"
     and brew upgrade
     and echo "Cleaning up Homebrew..."
     and brew cleanup
+    and brew doctor
 end
 
 function dot -d "Open dotfiles in VSCode"
