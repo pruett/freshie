@@ -1,4 +1,10 @@
 # -------------
+# Prompt
+# -------------
+# https://github.com/starship/starship
+starship init fish | source
+
+# -------------
 # Paths
 # -------------
 set -gx PATH\
