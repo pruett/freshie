@@ -1,10 +1,4 @@
 # -------------
-# Prompt
-# -------------
-# https://github.com/starship/starship
-starship init fish | source
-
-# -------------
 # Paths
 # -------------
 set -gx PATH\
@@ -31,6 +25,13 @@ end
 if test -e ~/.localconfig.fish
     source ~/.localconfig.fish
 end
+
+# -------------
+# Prompt
+# -------------
+# https://github.com/starship/starship
+starship init fish | source
+
 
 # -------------
 # Functions
