@@ -1,7 +1,7 @@
 # -------------
 # Paths
 # -------------
-set -gx PATH\
+fish_add_path -g\
  /usr/local/bin\
  /usr/local/sbin\
  /usr/bin\
@@ -9,14 +9,20 @@ set -gx PATH\
  /usr/sbin\
  /sbin
 
+
 # Add rust binaries to PATH if rust is installed
 if test -d ~/.cargo/bin/
-    set -gx PATH $PATH "$HOME/.cargo/bin"
+    fish_add_path -ga "$HOME/.cargo/bin"
 end
 
 # Add asdf if installed
 if test -d /usr/local/opt/asdf
     source /usr/local/opt/asdf/asdf.fish
+end
+
+# Add Volta if installed
+if test -d ~/.volta/bin/
+    fish_add_path -g "$VOLTA_HOME/bin"
 end
 
 # -------------
