@@ -9,7 +9,6 @@ fish_add_path -g\
  /usr/sbin\
  /sbin
 
-
 # Add rust binaries to PATH if rust is installed
 if test -d ~/.cargo/bin/
     fish_add_path -ga "$HOME/.cargo/bin"
